@@ -8,3 +8,6 @@ function handleClick(id) {
     $('#app').html(input.value);
   }
 }
+
+document.getElementById('code1').innerText = '<img src="any.png" alt="" onerror="(function() { alert(\'xss inject\')})()" >';
+document.getElementById('code2').innerText = '<script>alert(\'xss inject\')</script>';

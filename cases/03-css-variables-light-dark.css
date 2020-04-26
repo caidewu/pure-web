@@ -9,6 +9,7 @@
         --colorMark: #cc0000;
         --colorText: #ffffff;
         --colorLight: #777777;
+        --background: #000000;
     }
 }
 @media (prefers-color-scheme: light) {
@@ -19,5 +20,15 @@
         --colorMark: #cc0000;
         --colorText: #000000;
         --colorLight: #cccccc;
+        --background: #FFFFFF;
     }
+}
+
+* {
+    background: var(--background);
+    color: var(--colorText);
+}
+
+a {
+    color: var(--colorLink);
 }
