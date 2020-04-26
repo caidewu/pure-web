@@ -1,0 +1,23 @@
+:root {
+    --mode: 'unknown';
+}
+@media (prefers-color-scheme: dark) {
+    /* 黑暗模式 */
+    :root {
+        --mode: 'dark';
+        --colorLink: #bfdbff;
+        --colorMark: #cc0000;
+        --colorText: #ffffff;
+        --colorLight: #777777;
+    }
+}
+@media (prefers-color-scheme: light) {
+    /* 浅色主题 */
+    :root {
+        --mode: 'light';
+        --colorLink: #34538b;
+        --colorMark: #cc0000;
+        --colorText: #000000;
+        --colorLight: #cccccc;
+    }
+}

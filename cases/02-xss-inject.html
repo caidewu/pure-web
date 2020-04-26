@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.js"></script>
+    <script src="./02-xss-inject.js"></script>
+</head>
+<body>
+<div>
+    <textarea id="by_innerHTML" placeholder="使用innerHTML插入页面"></textarea>
+    <button onclick="handleClick('by_innerHTML')">插入</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <textarea id="by_jquery" placeholder="使用jquery的.html()插入页面"></textarea>
+    <button onclick="handleClick('by_jquery')">插入</button>
+</div>
+<div id="app"></div>
+</body>
+</html>
+
