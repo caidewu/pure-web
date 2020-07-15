@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>上传腾讯云cos</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.js"></script>
+</head>
+<body>
+<input type="file" id="file">
+<button id="btn">上传</button>
+<script>
+document.getElementById('btn').addEventListener('click', function() {
+    console.log("upload?")
+    var form = new FormData();
+    form.append("x-cos-security-token", "3vN0L8dgvrWKjd9U16FqbQhf7yM699qfb32b191a399584abeaf7cf7203717b32UrofdhrXiH7z-c7gkDjxYLSl6OM67RGJ2itpQ1EreBmkAuKDz0-kitm9LeHv9yLVGj4untBrdunALYn4iNFJHa5I5eNcJ2FgFVF4bC9jpmxF0XZM0ktNGyxLb7coenNRJHPRPiH0hqwr4swef5VQ3CHojREthcKa4lbqQ2ugZ4xR0cBIfvg41G711Ps-HqBnJQCP1oIR3KTli3rudTXfxWMrVQg_CPXo35d64dl6Jg1_em6kazC8SiPyzmKkL42U-ixA-UkNzsB3-NyFwCrlpQ_CXSD5PWGMDpqAt46XRxxW69rxR91rQTmAkZ2b5tTUCAw6l-ni3c3m2m_yLRI7ukfnnxLPRo47KA9kNiLkv6RWKLU7Mocb-gcdnm42OCvv7oIyVoUnwiURWJ8aBmr9uA");
+    form.append("x-cos-meta-fileid", "HF48ItD7seTP1OcPBfKkOaRzkKOzsdpn4kfGHfb5XyqOomtZpE9L1Z298LIXaiNwG/Vvp19nq/RidhW6O3ZWxGDVF7pGVlgSfCO7XoemNK5cISh9FCtqWuGuFnq/bT5eMExOFbt0in2IzC8U7txIGCyLJRqzJrHFrjP78FLRsZw1ZlxVJeZAGr6vuA==");
+    form.append("Signature", "q-sign-algorithm=sha1&q-ak=AKIDfKf6C0pnXQuGOH6ou9Tc8pr6JJb0lvJr92iFbec663evCfed4xKcqd0ljJ33jKCM&q-sign-time=1594733773;1594734673&q-key-time=1594733773;1594734673&q-header-list=&q-url-param-list=&q-signature=c23867d68ebdaa93c9fc97780265287b338c9b4f");
+    form.append("key", "backend-upload-file.mp4");
+    form.append("file", document.getElementById('file')[0]);
+
+    axios({
+        method: 'POST',
+        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        data: form,
+        url: 'https://cos.ap-shanghai.myqcloud.com/7369-singing-teg-sqllt-1302620050/backend-upload-file.mp4',
+    })
+
+});
+</script>
+</body>
+</html>
+
